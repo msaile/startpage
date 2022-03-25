@@ -3,7 +3,7 @@ $('#search-input').keyup(function(){
     $('#search-input').hide();
     $('#search-input').blur();
     $('#clock').show();
-    $("body").css("background-color", "rgb(34, 34, 34)");
+    $("body").css("background-color", "rgb(40, 40, 40)");
   }
   
 });
