@@ -2,8 +2,8 @@
 
 :root {
   /* colors */
-  --background: #282828;
-  --foreground: #665c54;
+  --background: #1b2028;
+  --foreground: #ccccb5;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 }
 
 .clock {
-  color: #ebdbb2;
+  color: #4b5975;
   font-family: 'Lexend Deca', sans-serif;
   font-weight: 500;
   font-size: 150px;

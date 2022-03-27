@@ -3,8 +3,11 @@ $('#search-input').keyup(function(){
     $('#search-input').hide();
     $('#search-input').blur();
     $('#clock').show();
-    $("body").css("background-color", "rgb(40, 40, 40)");
+    $("body").css("background-color", "rgb(27,32,40)");
   }
+  // else if ($(this).val().match(/r\/.+/g)) {
+  // $("body").css("background-image", "linear-gradient(to right, red, blue)");
+  // }
   
 });
 
@@ -26,6 +29,9 @@ $(document).ready(function(){
       } else if (s_input.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g)) {
         // for urls without http://www or https://www
         window.open(`http://www.${s_input}`, "_self", false);
+      } else if (s_input.match(/r\/.+/g)){
+        // reddit
+        window.open(`https://www.reddit.com/${s_input}`, "_self", false)
       } else {
         window.open(`https://www.google.com/search?q=${s_input}`, "_self", false);
 
