@@ -38,7 +38,7 @@ $(document).ready(function(){
         // for urls without http://www or https://www
         window.open(`http://www.${s_input}`, "_self", false);
         $("#search-input").val(''); 
-      } else if (s_input.match(/r\/+/g)){
+      }/* else if (s_input.match(/r\/+/g)){
         // reddit
         window.open(`https://www.reddit.com/${s_input}`, "_self", false)
         $("#search-input").val(''); 
@@ -51,7 +51,7 @@ $(document).ready(function(){
         s_input_without_prefix = s_input.replace(/yt\/+/g, '')
         window.open(`https://www.youtube.com/${s_input_without_prefix}`, "_self", false);
         $("#search-input").val(''); 
-      } else {
+      }*/ else {
         window.open(`https://www.google.com/search?q=${s_input}`, "_self", false);
         $("#search-input").val(''); 
 
