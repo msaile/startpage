@@ -8,6 +8,8 @@
 <table>
   
 <img src="https://i.imgur.com/ypG9WKA.png" align="center">
+
+### Just start typing what u need to search.
   
 <img src="https://i.imgur.com/5CWWA11.gif" align="center">
   
