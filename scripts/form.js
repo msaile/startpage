@@ -54,6 +54,12 @@ function inputVal(input) {
       window.open(`https://monkeytype.com/${mk_input}`, "_self", false);
       break;
 
+    // -- Check spotify prefix (s/) -- //
+    case /^s\/+/g.test(input):
+      let s_input = input.replace(/^s\/+/g, "");
+      window.open(`https://open.spotify.com/${s_input}`, "_self", false);
+      break;
+
 
       //// PREFIXES SEARCH /////
     // -- Search on Youtube -- //
@@ -130,6 +136,13 @@ function backColor(input) {
     // -- Background for Monkeytype -- //
     case /^mk\/+/g.test(input):
       body.style.backgroundColor = "#323437";
+      body.style.color = "#ffffff";
+      clock.style.color = "#ffffff";
+      break;
+
+    // -- Background for Spotify -- //
+    case /^s\/+/g.test(input):
+      body.style.backgroundImage = "linear-gradient(135deg, rgb(29, 211, 94), rgb(30, 215, 96)";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
