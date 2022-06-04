@@ -66,6 +66,24 @@ function inputVal(input) {
       window.open(`https://web.whatsapp.com/${w_input}`, "_self", false);
       break;
 
+    // -- Check Traslate prefix (tr/) -- //
+    case /^tr\/+/g.test(input):
+      let tr_input = input.replace(/^tr\/+/g, "");
+      window.open(`https://translate.google.com/`, "_self", false);
+      break;
+
+    // -- Check Discord prefix (dc/) -- //
+    case /^dc\/+/g.test(input):
+      let dc_input = input.replace(/^dc\/+/g, "");
+      window.open(`https://discord.com/app`, "_self", false);
+      break;
+
+    // -- Check Gmail prefix (gm/) -- //
+    case /^gm\/+/g.test(input):
+      let gm_input = input.replace(/^gm\/+/g, "");
+      window.open(`https://gmail.com`, "_self", false);
+      break;
+
       //// PREFIXES SEARCH /////
     // -- Search on Youtube -- //
     case /^y:/g.test(input):
@@ -82,22 +100,11 @@ function inputVal(input) {
       let tws_input = input.replace(/^tw:/g, "");
       window.open(`https://www.twitch.tv/search?term=${tws_input}`, "_self", false);
       break
-    // -- Check Traslate prefix (tr/) -- //
-    case /^tr\/+/g.test(input):
-      let tr_input = input.replace(/^tr\/+/g, "");
-      window.open(`https://translate.google.com/`, "_self", false);
-      break;
-    // -- Check Discord prefix (dc/) -- //
-    case /^dc\/+/g.test(input):
-      let dc_input = input.replace(/^dc\/+/g, "");
-      window.open(`https://discord.com/app`, "_self", false);
-      break;
-
-    // -- Check Gmail prefix (gm/) -- //
-    case /^gm\/+/g.test(input):
-      let gm_input = input.replace(/^gm\/+/g, "");
-      window.open(`https://gmail.com`, "_self", false);
-      break;
+    // -- Search on Twitter -- //
+    case /^tt:/g.test(input):
+      let tts_input = input.replace(/^tt:/g, "");
+      window.open(`https://twitter.com/search?q=${tts_input}&src=typed_query`, "_self", false);
+      break
     default:
       window.open(`https://google.com/search?q=${input}`, "_self", false);
       break;
@@ -115,6 +122,7 @@ function backColor(input) {
 
     // -- Background for Twitter -- //
     case /^tt\/+/g.test(input):
+    case /^tt:/g.test(input):
       body.style.backgroundImage = "linear-gradient(135deg, rgb(29, 161, 242), rgb(25, 96, 143))";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
