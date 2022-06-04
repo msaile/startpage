@@ -105,6 +105,11 @@ function inputVal(input) {
       let tts_input = input.replace(/^tt:/g, "");
       window.open(`https://twitter.com/search?q=${tts_input}&src=typed_query`, "_self", false);
       break
+    // -- Search on Translator -- //
+    case /^tr:/g.test(input):
+      let trs_input = input.replace(/^tr:/g, "");
+      window.open(`https://translate.google.com/#view=home&op=translate&sl=auto&tl=pt&text=${trs_input}`, "_self", false);
+      break
     default:
       window.open(`https://google.com/search?q=${input}`, "_self", false);
       break;
@@ -182,6 +187,7 @@ function backColor(input) {
 
     // -- Background for Translate -- //
     case /^tr\/+/g.test(input):
+    case /^tr:/g.test(input):
       body.style.backgroundColor = "rgb(26, 115, 232)";
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
