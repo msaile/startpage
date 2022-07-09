@@ -92,6 +92,12 @@ function inputVal(input) {
       window.open(`https://gmail.com`, "_self", false);
       break;
 
+    // NETFLIX
+    case /^n\/+/g.test(input):
+      let n_input = input.replace(/^n\/+/g, "");
+      window.open(`https://netflix.com`, "_self", false);
+      break;
+
     /*
      * SHORTCUT FOR SEARCHES IN SOME SITES
      * Prefix for search [:]
@@ -226,6 +232,14 @@ function backColor(input) {
       body.style.color = "#ffffff";
       clock.style.color = "#ffffff";
       break;
+
+    // NETFLIX
+    case /^n\/+/g.test(input):
+      body.style.backgroundImage = "linear-gradient(135deg, #E50914, #CB020C)";
+      body.style.color = "#ffffff";
+      clock.style.color = "#ffffff";
+      break;
+
     default:
       body.style.backgroundImage = "none";
       body.style.backgroundColor = "#00040a";
