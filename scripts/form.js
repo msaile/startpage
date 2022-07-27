@@ -136,11 +136,11 @@ function inputVal(input) {
 
     // HACKTHEBOX
     case /^htb$/g.test(input):
-      window.open("https://hackthebox.eu/", "_self", false);
+      window.open("https://hackthebox.com/", "_self", false);
       break;
     case /^htb\/+/g.test(input):
       let htb_input = input.replace(/^htb\/+/g, "");
-      window.open(`https://hackthebox.eu/${htb_input}`, "_self", false);
+      window.open(`https://hackthebox.com/${htb_input}`, "_self", false);
       break;
 
     // TRYHACKME
