@@ -140,7 +140,7 @@ function inputVal(input) {
       break;
     case /^htb\/+/g.test(input):
       let htb_input = input.replace(/^htb\/+/g, "");
-      window.open(`https://app.hackthebox.eu/${htb_input}`, "_self", false);
+      window.open(`https://hackthebox.eu/${htb_input}`, "_self", false);
       break;
 
     // TRYHACKME
